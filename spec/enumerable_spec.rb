@@ -31,4 +31,20 @@ RSpec.describe Enumerable do
     end
   end
 
+  describe "#my_map" do
+    it "returns updated array based on operation" do
+      expect([0,4,5].my_map{|x| x*3}).to eql([0,12,15])
+    end
+  end
+
+  describe "#my_inject" do
+    it "returns sum of array" do
+      expect([9,4,5].my_inject{|prev, cur| prev+cur}).to eql(18)
+    end
+
+    it "returns product of array" do
+      expect([2,4,5].my_inject{|prev, cur| prev*cur}).to eql(40)
+    end
+  end
+
 end
