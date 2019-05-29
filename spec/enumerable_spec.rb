@@ -22,4 +22,13 @@ RSpec.describe Enumerable do
     end
   end
 
+  describe "#my_count" do
+    it "counts elements of array" do
+      expect([0,4,5].count).to eql(3)
+    end
+    it "counts elements of array that satisfy condition" do
+      expect([0,4,5].count {|x| x > 4 }).to eql(1)
+    end
+  end
+
 end
