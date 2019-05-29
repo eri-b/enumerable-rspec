@@ -1,4 +1,4 @@
-require './lib/enumerable'
+require_relative '../lib/enumerable'
 
 RSpec.describe Enumerable do
   describe "#my_each" do
