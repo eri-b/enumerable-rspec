@@ -7,9 +7,9 @@ RSpec.describe Enumerable do
     end
   end
 
-  describe "#select" do
+  describe "#my_select" do
     it "selects portion of array based on condition" do
-      expect([0,4,5].select {|x| x>2}).to eql([4,5])
+      expect([0,4,5].my_select {|x| x>2}).to eql([4,5])
     end
   end
 
